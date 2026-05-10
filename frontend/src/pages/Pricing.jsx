@@ -6,9 +6,9 @@ import { Check, Crown } from "lucide-react";
 import { useAuth } from "@/lib/AuthContext";
 
 const PLANS = [
-  { id: "free", name: "Free", price: "₹0", features: ["3 templates", "Basic editor", "PDF download", "Limited AI"], cta: "Current Plan" },
-  { id: "pro", name: "Pro", price: "₹199", period: "one-time", features: ["All 9 templates", "Unlimited AI (Claude + GPT)", "PDF + DOCX downloads", "ATS Score Checker", "Share link"], featured: true },
-  { id: "premium", name: "Premium", price: "₹499", period: "one-time", features: ["Everything in Pro", "Priority AI", "Premium creative templates", "No watermark", "Priority support"] },
+  { id: "free", name: "Free", price: "₹0", features: ["3 templates", "Basic editor", "PDF download", "Limited AI", "Basic ATS optimization"], cta: "Current Plan" },
+  { id: "pro", name: "Pro", price: "₹199", period: "one-time", features: ["All 9 templates", "Unlimited AI (Claude + GPT)", "PDF + DOCX downloads", "ATS Score Checker", "Share link", "Custom template builder", "Faster AI responses"], featured: true },
+  { id: "premium", name: "Premium", price: "₹499", period: "one-time", features: ["Everything in Pro", "Priority AI", "Premium creative templates", "Build your own templates", "No watermark", "Executive resume styles", "Priority support", "Future template updates"] },
 ];
 
 export default function Pricing() {

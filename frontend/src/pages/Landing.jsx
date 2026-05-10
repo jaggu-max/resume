@@ -25,7 +25,7 @@ export default function Landing() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-40 pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28 grid md:grid-cols-12 gap-10 items-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16 grid md:grid-cols-12 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="md:col-span-7">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">A premium SaaS · Built for India & beyond</div>
             <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
@@ -49,18 +49,25 @@ export default function Landing() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="md:col-span-5">
-            <div className="relative aspect-[3/4] bg-white border border-border rounded-md shadow-2xl p-8 rotate-1 hover:rotate-0 transition-transform">
-              <div className="text-3xl font-heading mb-1">Aarav Sharma</div>
-              <div className="text-sm text-muted-foreground mb-4">Software Engineer · Bengaluru</div>
-              <div className="h-px bg-border mb-4"></div>
-              <div className="text-xs uppercase tracking-[0.2em] mb-2 text-accent">Experience</div>
-              <div className="space-y-3 text-sm">
+            <div className="relative aspect-[3/4] bg-white border border-border rounded-md shadow-2xl p-7 rotate-1 hover:rotate-0 transition-transform">
+              <div className="flex items-center gap-3 pb-3 mb-3 border-b border-border">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-heading text-2xl shrink-0 shadow-md">
+                  AS
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-2xl font-heading leading-tight truncate">Aarav Sharma</div>
+                  <div className="text-[11px] text-muted-foreground">Software Engineer · Bengaluru</div>
+                  <div className="text-[10px] text-muted-foreground mt-0.5">aarav@example.com · +91 98xxx</div>
+                </div>
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.2em] mb-2 text-accent font-semibold">Experience</div>
+              <div className="space-y-2.5 text-[12px]">
                 <div><b>Senior Engineer</b> · Stripe · 2022-Present<br/><span className="text-muted-foreground">Led payment infrastructure handling 2B+/year.</span></div>
                 <div><b>Engineer</b> · Razorpay · 2019-2022<br/><span className="text-muted-foreground">Shipped UPI 2.0 integration across 200+ merchants.</span></div>
               </div>
-              <div className="text-xs uppercase tracking-[0.2em] mt-5 mb-2 text-accent">Skills</div>
-              <div className="flex flex-wrap gap-2 text-xs">
-                {["React","FastAPI","MongoDB","AWS","Python"].map(s => <span key={s} className="border border-border px-2 py-1 rounded-sm">{s}</span>)}
+              <div className="text-[10px] uppercase tracking-[0.2em] mt-4 mb-2 text-accent font-semibold">Skills</div>
+              <div className="flex flex-wrap gap-1.5 text-[10px]">
+                {["React","FastAPI","MongoDB","AWS","Python"].map(s => <span key={s} className="border border-border px-2 py-0.5 rounded-sm">{s}</span>)}
               </div>
               <div className="absolute -bottom-4 -right-4 bg-accent text-white text-xs px-3 py-2 rounded-sm shadow-lg font-medium">ATS Score: 94</div>
             </div>
