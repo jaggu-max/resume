@@ -6,7 +6,7 @@ Build a complete premium Full Stack AI Resume Builder SaaS website with all feat
 ## Architecture
 - **Backend**: FastAPI + MongoDB (single server.py)
 - **Frontend**: React + Tailwind + shadcn/ui + framer-motion + dnd-kit
-- **AI**: Emergent Universal LLM key (Claude Sonnet 4.5 + GPT-5.1)
+- **AI**: Universal LLM integration (Claude/OpenAI - configure as needed)
 - **Auth**: JWT (cookie + Bearer header) with bcrypt passwords + Google login stub
 - **Payments**: Manual UPI flow (QR + UTR + screenshot upload + admin verification)
 - **PDF**: Client-side via html2canvas + jsPDF; DOCX via docx package

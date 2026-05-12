@@ -6,7 +6,7 @@ import time
 import requests
 import pytest
 
-BASE_URL = os.environ.get('REACT_APP_BACKEND_URL', 'https://smart-cv-craft-3.preview.emergentagent.com').rstrip('/')
+BASE_URL = os.environ.get('REACT_APP_BACKEND_URL', 'http://localhost:5000').rstrip('/')
 ADMIN_EMAIL = "admin@resumeai.com"
 ADMIN_PASS = "Admin@12345"
 

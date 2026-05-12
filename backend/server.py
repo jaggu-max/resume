@@ -16,7 +16,6 @@ from fastapi.responses import Response as FastResponse
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, EmailStr, Field
-from emergentintegrations.llm.chat import LlmChat, UserMessage
 from fallbacks import fallback as smart_fallback
 
 # ---------- Setup ----------
@@ -26,7 +25,8 @@ db = client[os.environ['DB_NAME']]
 
 JWT_SECRET = os.environ['JWT_SECRET']
 JWT_ALG = "HS256"
-EMERGENT_LLM_KEY = os.environ['EMERGENT_LLM_KEY']
+# LLM API Key - update with your preferred LLM provider
+# LLM_API_KEY = os.environ.get('LLM_API_KEY', '')
 UPI_ID = os.environ.get('UPI_ID', '')
 UPI_NAME = os.environ.get('UPI_NAME', 'ResumeAI')
 
@@ -299,7 +299,9 @@ async def ai_generate(body: AIRequest, user: dict = Depends(get_current_user)):
     last_err = None
     for provider, model in chain:
         try:
-            chat = LlmChat(api_key=EMERGENT_LLM_KEY, session_id=f"{user['id']}-{body.feature}", system_message=sys).with_model(provider, model)
+            # TODO: Replace with your LLM provider integration
+            # chat = LlmChat(api_key=LLM_API_KEY, session_id=f"{user['id']}-{body.feature}", system_message=sys).with_model(provider, model)
+            pass  # Placeholder for LLM integration
             if body.feature == "chat" and body.history:
                 hist = "\n".join([f"{m.get('role','user').upper()}: {m.get('content','')}" for m in body.history[-6:]])
                 prompt_full = f"Conversation so far:\n{hist}\n\nUSER: {prompt}\nASSISTANT:"
